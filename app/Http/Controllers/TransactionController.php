@@ -13,7 +13,7 @@ class TransactionController extends Controller
 {
     public function rentCd(Request $request, $id)
     {
-        if ($request->user()->can('costumer')) { //check if the user loggin is costumer or owner
+        if ($request->user()->can('costumer')) { //only costumer that able to access this url
             // rules for input
             $rules = [
                 'quantity' => 'required|integer',
