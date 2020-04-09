@@ -22,3 +22,41 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## How to install
+
+##### 1. Clone this repository with git command on your working directory (C:\xampp\htdocs on xampp or C:\laragon\www on laragon): git clone https://github.com/feedlyy/Jojonomic-BE.git
+##### 2. Create file .env, copy this format and Change the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME and DB_PASSWORD parameter as your database configuration.
+```ruby
+APP_NAME=Lumen
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+APP_TIMEZONE=Asia/Jakarta
+
+LOG_CHANNEL=stack
+LOG_SLACK_WEBHOOK_URL=
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=
+DB_USERNAME=root
+DB_PASSWORD=
+
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+```
+
+##### 3. Install the dependencies: composer install --no-scripts
+##### 4. Generate a random key for env file
+- run the server, php -S localhost:8000 -t public
+- access this url for generate random key and copy it to APP_KEY in .env file
+```ruby
+localhost:8000/key
+```
+##### 5. Migrate the tables to database and data(seeder) with artisan command php artisan migrate:fresh --seed
+
+## Full list of api
+(your project folder)/routes/web.php
