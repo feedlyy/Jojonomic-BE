@@ -32,6 +32,11 @@ class TransactionController extends Controller
             // get cds that want to rent
             $cd = Cd::query()->find($id);
 
+            // check if id is exist in db
+            if ($cd === null) {
+                return response()->json(['Error' => 'Id Not Found'], 404);
+            }
+
             // get loggin user
             $user = Auth::user();
 
