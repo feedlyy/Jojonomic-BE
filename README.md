@@ -63,3 +63,11 @@ localhost:8000/key
 
 ## Full list of api
 (your project folder)/routes/web.php
+
+##### How to login
+almost all of routes protected with middleware that you have to login first to using it.
+
+- Login first at localhost:8000/login
+- input email and password
+- after you successfully log in, you have 32 characters token for accessing another route that protected by middleware with input param: token=your 32 characters token.
+
