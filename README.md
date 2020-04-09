@@ -58,5 +58,8 @@ localhost:8000/key
 ```
 ##### 5. Migrate the tables to database and data(seeder) with artisan command php artisan migrate:fresh --seed
 
+## API Blueprint
+![How to use api](https://user-images.githubusercontent.com/33906363/78882510-5fcf9c00-7a82-11ea-87d9-28feba2bdf8f.png)
+
 ## Full list of api
 (your project folder)/routes/web.php
