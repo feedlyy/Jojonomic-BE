@@ -13,7 +13,7 @@ class OwnerController extends Controller
 
     public function index ()
     {
-        $Cd = Cd::all();
+        $Cd = Cd::query()->simplePaginate(5);
         return response()->json(['Success' => $Cd], 200);
     }
 
