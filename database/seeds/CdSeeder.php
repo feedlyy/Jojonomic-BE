@@ -36,5 +36,23 @@ class CdSeeder extends Seeder
             'category' => 'romance',
             'quantity' => 10
         ]);
+        DB::table('cds')->insert([
+            'title' => 'Habibie Ainun 2',
+            'rate' => 25000,
+            'category' => 'romance',
+            'quantity' => 5
+        ]);
+        DB::table('cds')->insert([
+            'title' => 'Doraemon',
+            'rate' => 12000,
+            'category' => 'cartoon',
+            'quantity' => 10
+        ]);
+        DB::table('cds')->insert([
+            'title' => 'Ninja Hatori',
+            'rate' => 10000,
+            'category' => 'cartoon',
+            'quantity' => 4
+        ]);
     }
 }
