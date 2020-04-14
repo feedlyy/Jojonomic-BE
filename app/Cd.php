@@ -17,7 +17,7 @@ class Cd extends Model
 
     public $rules = [
       'title' => 'required|string',
-        'rate' => 'required|string',
+        'rate' => 'required|integer',
         'category' => 'required|in:action,cartoon,horror,romance',
         'quantity' => 'required|integer'
     ];
